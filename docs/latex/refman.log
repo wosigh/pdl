@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.12.23)  29 JAN 2010 15:13
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.12.23)  29 JAN 2010 15:29
 entering extended mode
  %&-line parsing enabled.
 **refman.tex
@@ -805,34 +805,57 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [3]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
- [4] [5]) [6]
+ [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+\T1/ptm/m/n/10 Inform lu-na/we-bOS that mu-sic is play-ing. In-form lu-na/we-bO
+S that mu-sic is play-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+\T1/ptm/m/n/10 ing Sends {'app-Name': 'com.palm.pdl', 'is-Play-ing': s} where s
+ is true or false to
+ []
+
+[6]) [7]
 \openout2 = `libpdl_8h.aux'.
 
+ (./libpdl_8h.tex [8
 
-(./libpdl_8h.tex [7
+] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 Inform lu-na/we-bOS that mu-sic is play-ing. In-form lu-na/we-bO
+S that mu-sic is play-
+ []
 
-] [8]) [9] (./refman.ind [10
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 ing Sends {'app-Name': 'com.palm.pdl', 'is-Play-ing': s} where s
+ is true or false to
+ []
+
+[11]) [12] (./refman.ind [13
 
 
-]) (./refman.aux
-(./libpdl_8h.aux)) ) 
+]) (./refman.aux (./libpdl_8h.aux)) ) 
 Here is how much of TeX's memory you used:
- 7966 strings out of 495069
- 111313 string characters out of 1183032
+ 7969 strings out of 495069
+ 111334 string characters out of 1183032
  200438 words of memory out of 3000000
  10896 multiletter control sequences out of 10000+50000
  41948 words of font info for 44 fonts, out of 3000000 for 5000
  28 hyphenation exceptions out of 8191
- 36i,12n,58p,262b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/sh
-are/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/t
-ype1/bluesky/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8
-a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf
--dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on refman.pdf (14 pages, 144334 bytes).
+ 36i,12n,58p,262b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}</usr/share/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/t
+exmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/
+urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+</usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/
+utmri8a.pfb>
+Output written on refman.pdf (17 pages, 150948 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 131072)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 131072)
  345 words of extra memory for PDF output out of 10000 (max. 10000000)
 

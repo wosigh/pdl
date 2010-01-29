@@ -33,8 +33,8 @@ int PDL_LSCall(char * arg1, char * arg2){return 0;}
 int PDL_ScreenTimeoutEnable(int enable){return 0;}
 void PDL_BannerMessagesEnable(int enable){}
 void PDL_CustomPauseUiEnable(int enable){}
+void PDL_FocusMessageEnable(int bool){}
+void PDL_GesturesEnable(int bool){}
 char * PDL_GetKeyName(int key){return 0;}
 
 void *PDLNet_Get_Info();
-void *PDL_FocusMessageEnable(int bool);
-void *PDL_GesturesEnable(int bool);

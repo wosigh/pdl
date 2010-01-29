@@ -95,38 +95,90 @@ int PDL_LaunchEmail(char * subject, char * text);
  */
 int PDL_GetLanguage(char * buffer, int sizeofbuffer);
 
-//Sends {'appName': 'com.palm.pdl', 'isPlaying': %s} where %s is true or false to luna://com.palm.mediaevents/notifyPlayingStatusChange
-//true=1, false=0
+/*!
+ * \brief Inform luna/webOS that music is playing
+ *
+ * Inform luna/webOS that music is playing
+ * Sends {'appName': 'com.palm.pdl', 'isPlaying': %s} where %s is true or false to luna://com.palm.mediaevents/notifyPlayingStatusChange
+ *
+ * \param enable true=1, false=0
+ *
+ * \return zero for success ??
+ */
 int PDL_NotifyMusicPlaying(int enable);
 
-//Cleans things up, haven't fully traced everything it's doing yet
+/*!
+ * \brief Cleans things up, haven't fully traced everything it's doing yet
+ */
 int PDL_Quit();
 
-//Cleans things up, haven't fully traced everything it's doing yet
-int PDL_LSCall(char * arg1, char * arg2);
+/*
+ * \brief make luna service calls
+ *
+ * make luna service calls
+ * Cleans things up, haven't fully traced everything it's doing yet ~mdkline
+ *
+ * \param service_uri The service uri (example: luna://com.4chan.webapi/getImages)
+ * \param payload JSON string of params to be passed to the service
+ *
+ * \return zen for success ??
+ */
+int PDL_LSCall(char * serivce_uri, char * payload);
 
 //The Following are WebOS hooks in SDL, I'm not sure exactly what they control or where yet, it's just passed directly to SDL
 
-//Enables/Disables Screen Timeouts
+/*!
+ * \brief Enables/Disables Screen Timeouts
+ *
+ * \param enable 1 for enable, 0 for disable
+ */
 int PDL_ScreenTimeoutEnable(int enable);
 
-//Enables/Disables Notifications
+/*!
+ * \brief Enables/Disables Notifications
+ *
+ * \param enable 1 for enable, 0 for disable
+ */
 void PDL_BannerMessagesEnable(int enable);
 
-//Enables/Disables Custom Pause UI
+/*!
+ * \brief Enables/Disables Custom Pause UI
+ *
+ * \param enable 1 for enable, 0 for disable
+ */
 void PDL_CustomPauseUiEnable(int enable);
 
+/*!
+ * \brief Enables/Disables Gestures
+ *
+ * \param enable 1 for enable, 0 for disable
+ */
+void PDL_GesturesEnable(int enable);
 
-// I think most of the keys are passed to SDL_GetKeyName, but the following are PDL specific?
-// 229 = gesture forward
-// 231 = gesture area
-// 27 = gesture back
+/*!
+ * \brief Enables/Disables ????????
+ *
+ * \param enable 1 for enable, 0 for disable
+ */
+void PDL_FocusMessageEnable(int enable);
+
+/*!
+ * \brief Get key name
+ *
+ * Get key name
+ *
+ * I think most of the keys are passed to SDL_GetKeyName, but the following are PDL specific?
+ * 229 = gesture forward, 231 = gesture area, 27 = gesture back
+ *
+ * \param key keycode?
+ *
+ * \return a string with the key name
+ */
 char * PDL_GetKeyName(int key);
 
-
-
+/*!
+ * \breif ???????????
+ */
 void *PDLNet_Get_Info();
-void *PDL_FocusMessageEnable(int bool);
-void *PDL_GesturesEnable(int bool);
 
 #endif /* LIBPDL_H_ */

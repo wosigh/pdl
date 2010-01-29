@@ -77,41 +77,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00087"></a>00087 
 <a name="l00096"></a>00096 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#ad8defdaf8c921d744db8f97ae7a8ca2e" title="Fills buffer with language string (example: en_US).">PDL_GetLanguage</a>(<span class="keywordtype">char</span> * buffer, <span class="keywordtype">int</span> sizeofbuffer);
 <a name="l00097"></a>00097 
-<a name="l00098"></a>00098 <span class="comment">//Sends {&apos;appName&apos;: &apos;com.palm.pdl&apos;, &apos;isPlaying&apos;: %s} where %s is true or false to luna://com.palm.mediaevents/notifyPlayingStatusChange</span>
-<a name="l00099"></a>00099 <span class="comment">//true=1, false=0</span>
-<a name="l00100"></a>00100 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#a063a6fa55eab93378fb03d644e85f4f1">PDL_NotifyMusicPlaying</a>(<span class="keywordtype">int</span> enable);
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="comment">//Cleans things up, haven&apos;t fully traced everything it&apos;s doing yet</span>
-<a name="l00103"></a>00103 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#aac51c68a32f0c0e2154ab5cd2b5361c7">PDL_Quit</a>();
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="comment">//Cleans things up, haven&apos;t fully traced everything it&apos;s doing yet</span>
-<a name="l00106"></a>00106 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#af1b625ec84d61d05e1de09daa23cd2cc">PDL_LSCall</a>(<span class="keywordtype">char</span> * arg1, <span class="keywordtype">char</span> * arg2);
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="comment">//The Following are WebOS hooks in SDL, I&apos;m not sure exactly what they control or where yet, it&apos;s just passed directly to SDL</span>
+<a name="l00108"></a>00108 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#a063a6fa55eab93378fb03d644e85f4f1" title="Inform luna/webOS that music is playing.">PDL_NotifyMusicPlaying</a>(<span class="keywordtype">int</span> enable);
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110 <span class="comment">//Enables/Disables Screen Timeouts</span>
-<a name="l00111"></a>00111 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#af572878137da8c583ed3de330fbe9ba7">PDL_ScreenTimeoutEnable</a>(<span class="keywordtype">int</span> enable);
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113 <span class="comment">//Enables/Disables Notifications</span>
-<a name="l00114"></a>00114 <span class="keywordtype">void</span> <a class="code" href="libpdl_8c.html#a48961aeb42ad434658748780a23638bf">PDL_BannerMessagesEnable</a>(<span class="keywordtype">int</span> enable);
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116 <span class="comment">//Enables/Disables Custom Pause UI</span>
-<a name="l00117"></a>00117 <span class="keywordtype">void</span> <a class="code" href="libpdl_8c.html#aaaf46b50089d21bb91526978d910d41e">PDL_CustomPauseUiEnable</a>(<span class="keywordtype">int</span> enable);
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120 <span class="comment">// I think most of the keys are passed to SDL_GetKeyName, but the following are PDL specific?</span>
-<a name="l00121"></a>00121 <span class="comment">// 229 = gesture forward</span>
-<a name="l00122"></a>00122 <span class="comment">// 231 = gesture area</span>
-<a name="l00123"></a>00123 <span class="comment">// 27 = gesture back</span>
-<a name="l00124"></a>00124 <span class="keywordtype">char</span> * <a class="code" href="libpdl_8c.html#ab4990d40c8e84347ae844b2940b1fa39">PDL_GetKeyName</a>(<span class="keywordtype">int</span> key);
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 
+<a name="l00113"></a>00113 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#aac51c68a32f0c0e2154ab5cd2b5361c7" title="Cleans things up, haven&amp;#39;t fully traced everything it&amp;#39;s doing yet.">PDL_Quit</a>();
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="comment">/*</span>
+<a name="l00116"></a>00116 <span class="comment"> * \brief make luna service calls</span>
+<a name="l00117"></a>00117 <span class="comment"> *</span>
+<a name="l00118"></a>00118 <span class="comment"> * make luna service calls</span>
+<a name="l00119"></a>00119 <span class="comment"> * Cleans things up, haven&apos;t fully traced everything it&apos;s doing yet ~mdkline</span>
+<a name="l00120"></a>00120 <span class="comment"> *</span>
+<a name="l00121"></a>00121 <span class="comment"> * \param service_uri The service uri (example: luna://com.4chan.webapi/getImages)</span>
+<a name="l00122"></a>00122 <span class="comment"> * \param payload JSON string of params to be passed to the service</span>
+<a name="l00123"></a>00123 <span class="comment"> *</span>
+<a name="l00124"></a>00124 <span class="comment"> * \return zen for success ??</span>
+<a name="l00125"></a>00125 <span class="comment"> */</span>
+<a name="l00126"></a>00126 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#af1b625ec84d61d05e1de09daa23cd2cc">PDL_LSCall</a>(<span class="keywordtype">char</span> * serivce_uri, <span class="keywordtype">char</span> * payload);
 <a name="l00127"></a>00127 
-<a name="l00128"></a>00128 <span class="keywordtype">void</span> *<a class="code" href="libpdl_8c.html#af24a33b85d68e69cecfb18e2718579bf">PDLNet_Get_Info</a>();
-<a name="l00129"></a>00129 <span class="keywordtype">void</span> *<a class="code" href="libpdl_8c.html#abec9c74bee39180e65b647691a6ca792">PDL_FocusMessageEnable</a>(<span class="keywordtype">int</span> <span class="keywordtype">bool</span>);
-<a name="l00130"></a>00130 <span class="keywordtype">void</span> *<a class="code" href="libpdl_8c.html#acd9d8cea35bb1a6aa4fba82366a9d0c7">PDL_GesturesEnable</a>(<span class="keywordtype">int</span> <span class="keywordtype">bool</span>);
-<a name="l00131"></a>00131 
-<a name="l00132"></a>00132 <span class="preprocessor">#endif </span><span class="comment">/* LIBPDL_H_ */</span>
+<a name="l00128"></a>00128 <span class="comment">//The Following are WebOS hooks in SDL, I&apos;m not sure exactly what they control or where yet, it&apos;s just passed directly to SDL</span>
+<a name="l00129"></a>00129 
+<a name="l00135"></a>00135 <span class="keywordtype">int</span> <a class="code" href="libpdl_8c.html#af572878137da8c583ed3de330fbe9ba7" title="Enables/Disables Screen Timeouts.">PDL_ScreenTimeoutEnable</a>(<span class="keywordtype">int</span> enable);
+<a name="l00136"></a>00136 
+<a name="l00142"></a>00142 <span class="keywordtype">void</span> <a class="code" href="libpdl_8c.html#a48961aeb42ad434658748780a23638bf" title="Enables/Disables Notifications.">PDL_BannerMessagesEnable</a>(<span class="keywordtype">int</span> enable);
+<a name="l00143"></a>00143 
+<a name="l00149"></a>00149 <span class="keywordtype">void</span> <a class="code" href="libpdl_8c.html#aaaf46b50089d21bb91526978d910d41e" title="Enables/Disables Custom Pause UI.">PDL_CustomPauseUiEnable</a>(<span class="keywordtype">int</span> enable);
+<a name="l00150"></a>00150 
+<a name="l00156"></a>00156 <span class="keywordtype">void</span> <a class="code" href="libpdl_8c.html#a2cd3815e8eb259093c46df216581c69d" title="Enables/Disables Gestures.">PDL_GesturesEnable</a>(<span class="keywordtype">int</span> enable);
+<a name="l00157"></a>00157 
+<a name="l00163"></a>00163 <span class="keywordtype">void</span> <a class="code" href="libpdl_8c.html#af1b183ec94d53d803fcd87f8e23f7f5b" title="Enables/Disables ????????">PDL_FocusMessageEnable</a>(<span class="keywordtype">int</span> enable);
+<a name="l00164"></a>00164 
+<a name="l00177"></a>00177 <span class="keywordtype">char</span> * <a class="code" href="libpdl_8c.html#ab4990d40c8e84347ae844b2940b1fa39" title="Get key name.">PDL_GetKeyName</a>(<span class="keywordtype">int</span> key);
+<a name="l00178"></a>00178 
+<a name="l00182"></a>00182 <span class="keywordtype">void</span> *<a class="code" href="libpdl_8c.html#af24a33b85d68e69cecfb18e2718579bf">PDLNet_Get_Info</a>();
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184 <span class="preprocessor">#endif </span><span class="comment">/* LIBPDL_H_ */</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -127,7 +126,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr size="1"/><address style="text-align: right;"><small>Generated on Fri Jan 29 15:12:41 2010 for WIDKPluginDevelopmentLibrary by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Fri Jan 29 15:29:04 2010 for WIDKPluginDevelopmentLibrary by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

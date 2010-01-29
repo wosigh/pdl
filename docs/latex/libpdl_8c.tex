@@ -21,24 +21,24 @@ int \hyperlink{libpdl_8c_a9423e6ff5178c6c88c86329465373c5b}{PDL\_\-LaunchEmail} 
 int \hyperlink{libpdl_8c_ad8defdaf8c921d744db8f97ae7a8ca2e}{PDL\_\-GetLanguage} (char $\ast$buffer, int sizeofbuffer)
 \begin{DoxyCompactList}\small\item\em Fills buffer with language string (example: en\_\-US). \item\end{DoxyCompactList}\item 
 int \hyperlink{libpdl_8c_a063a6fa55eab93378fb03d644e85f4f1}{PDL\_\-NotifyMusicPlaying} (int enable)
-\item 
+\begin{DoxyCompactList}\small\item\em Inform luna/webOS that music is playing. \item\end{DoxyCompactList}\item 
 int \hyperlink{libpdl_8c_aac51c68a32f0c0e2154ab5cd2b5361c7}{PDL\_\-Quit} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Cleans things up, haven't fully traced everything it's doing yet. \item\end{DoxyCompactList}\item 
 int \hyperlink{libpdl_8c_af1b625ec84d61d05e1de09daa23cd2cc}{PDL\_\-LSCall} (char $\ast$arg1, char $\ast$arg2)
 \item 
 int \hyperlink{libpdl_8c_af572878137da8c583ed3de330fbe9ba7}{PDL\_\-ScreenTimeoutEnable} (int enable)
-\item 
+\begin{DoxyCompactList}\small\item\em Enables/Disables Screen Timeouts. \item\end{DoxyCompactList}\item 
 void \hyperlink{libpdl_8c_a48961aeb42ad434658748780a23638bf}{PDL\_\-BannerMessagesEnable} (int enable)
-\item 
+\begin{DoxyCompactList}\small\item\em Enables/Disables Notifications. \item\end{DoxyCompactList}\item 
 void \hyperlink{libpdl_8c_aaaf46b50089d21bb91526978d910d41e}{PDL\_\-CustomPauseUiEnable} (int enable)
-\item 
+\begin{DoxyCompactList}\small\item\em Enables/Disables Custom Pause UI. \item\end{DoxyCompactList}\item 
+void \hyperlink{libpdl_8c_af1b183ec94d53d803fcd87f8e23f7f5b}{PDL\_\-FocusMessageEnable} (int bool)
+\begin{DoxyCompactList}\small\item\em Enables/Disables ???????? \item\end{DoxyCompactList}\item 
+void \hyperlink{libpdl_8c_a2cd3815e8eb259093c46df216581c69d}{PDL\_\-GesturesEnable} (int bool)
+\begin{DoxyCompactList}\small\item\em Enables/Disables Gestures. \item\end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{libpdl_8c_ab4990d40c8e84347ae844b2940b1fa39}{PDL\_\-GetKeyName} (int key)
-\item 
+\begin{DoxyCompactList}\small\item\em Get key name. \item\end{DoxyCompactList}\item 
 void $\ast$ \hyperlink{libpdl_8c_af24a33b85d68e69cecfb18e2718579bf}{PDLNet\_\-Get\_\-Info} ()
-\item 
-void $\ast$ \hyperlink{libpdl_8c_abec9c74bee39180e65b647691a6ca792}{PDL\_\-FocusMessageEnable} (int bool)
-\item 
-void $\ast$ \hyperlink{libpdl_8c_acd9d8cea35bb1a6aa4fba82366a9d0c7}{PDL\_\-GesturesEnable} (int bool)
 \end{DoxyCompactItemize}
 
 
@@ -48,21 +48,41 @@ void $\ast$ \hyperlink{libpdl_8c_acd9d8cea35bb1a6aa4fba82366a9d0c7}{PDL\_\-Gestu
 \index{PDL\_\-BannerMessagesEnable@{PDL\_\-BannerMessagesEnable}!libpdl.c@{libpdl.c}}
 \subsubsection[{PDL\_\-BannerMessagesEnable}]{\setlength{\rightskip}{0pt plus 5cm}void PDL\_\-BannerMessagesEnable (int {\em enable})}}
 \label{libpdl_8c_a48961aeb42ad434658748780a23638bf}
+
+
+Enables/Disables Notifications. 
+\begin{DoxyParams}{Parameters}
+\item[{\em enable}]1 for enable, 0 for disable \end{DoxyParams}
 \hypertarget{libpdl_8c_aaaf46b50089d21bb91526978d910d41e}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-CustomPauseUiEnable@{PDL\_\-CustomPauseUiEnable}}
 \index{PDL\_\-CustomPauseUiEnable@{PDL\_\-CustomPauseUiEnable}!libpdl.c@{libpdl.c}}
 \subsubsection[{PDL\_\-CustomPauseUiEnable}]{\setlength{\rightskip}{0pt plus 5cm}void PDL\_\-CustomPauseUiEnable (int {\em enable})}}
 \label{libpdl_8c_aaaf46b50089d21bb91526978d910d41e}
-\hypertarget{libpdl_8c_abec9c74bee39180e65b647691a6ca792}{
+
+
+Enables/Disables Custom Pause UI. 
+\begin{DoxyParams}{Parameters}
+\item[{\em enable}]1 for enable, 0 for disable \end{DoxyParams}
+\hypertarget{libpdl_8c_af1b183ec94d53d803fcd87f8e23f7f5b}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-FocusMessageEnable@{PDL\_\-FocusMessageEnable}}
 \index{PDL\_\-FocusMessageEnable@{PDL\_\-FocusMessageEnable}!libpdl.c@{libpdl.c}}
-\subsubsection[{PDL\_\-FocusMessageEnable}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ PDL\_\-FocusMessageEnable (int {\em bool})}}
-\label{libpdl_8c_abec9c74bee39180e65b647691a6ca792}
-\hypertarget{libpdl_8c_acd9d8cea35bb1a6aa4fba82366a9d0c7}{
+\subsubsection[{PDL\_\-FocusMessageEnable}]{\setlength{\rightskip}{0pt plus 5cm}void PDL\_\-FocusMessageEnable (int {\em enable})}}
+\label{libpdl_8c_af1b183ec94d53d803fcd87f8e23f7f5b}
+
+
+Enables/Disables ???????? 
+\begin{DoxyParams}{Parameters}
+\item[{\em enable}]1 for enable, 0 for disable \end{DoxyParams}
+\hypertarget{libpdl_8c_a2cd3815e8eb259093c46df216581c69d}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-GesturesEnable@{PDL\_\-GesturesEnable}}
 \index{PDL\_\-GesturesEnable@{PDL\_\-GesturesEnable}!libpdl.c@{libpdl.c}}
-\subsubsection[{PDL\_\-GesturesEnable}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ PDL\_\-GesturesEnable (int {\em bool})}}
-\label{libpdl_8c_acd9d8cea35bb1a6aa4fba82366a9d0c7}
+\subsubsection[{PDL\_\-GesturesEnable}]{\setlength{\rightskip}{0pt plus 5cm}void PDL\_\-GesturesEnable (int {\em enable})}}
+\label{libpdl_8c_a2cd3815e8eb259093c46df216581c69d}
+
+
+Enables/Disables Gestures. 
+\begin{DoxyParams}{Parameters}
+\item[{\em enable}]1 for enable, 0 for disable \end{DoxyParams}
 \hypertarget{libpdl_8c_abc8f1214fafe023ed99448f360e0b0c0}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-GetDeviceName@{PDL\_\-GetDeviceName}}
 \index{PDL\_\-GetDeviceName@{PDL\_\-GetDeviceName}!libpdl.c@{libpdl.c}}
@@ -81,6 +101,18 @@ zero for success ??
 \index{PDL\_\-GetKeyName@{PDL\_\-GetKeyName}!libpdl.c@{libpdl.c}}
 \subsubsection[{PDL\_\-GetKeyName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ PDL\_\-GetKeyName (int {\em key})}}
 \label{libpdl_8c_ab4990d40c8e84347ae844b2940b1fa39}
+
+
+Get key name. Get key name
+
+I think most of the keys are passed to SDL\_\-GetKeyName, but the following are PDL specific? 229 = gesture forward, 231 = gesture area, 27 = gesture back
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em key}]keycode?\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string with the key name 
+\end{DoxyReturn}
 \hypertarget{libpdl_8c_ad8defdaf8c921d744db8f97ae7a8ca2e}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-GetLanguage@{PDL\_\-GetLanguage}}
 \index{PDL\_\-GetLanguage@{PDL\_\-GetLanguage}!libpdl.c@{libpdl.c}}
@@ -145,16 +177,33 @@ zero for success ??
 \index{PDL\_\-NotifyMusicPlaying@{PDL\_\-NotifyMusicPlaying}!libpdl.c@{libpdl.c}}
 \subsubsection[{PDL\_\-NotifyMusicPlaying}]{\setlength{\rightskip}{0pt plus 5cm}int PDL\_\-NotifyMusicPlaying (int {\em enable})}}
 \label{libpdl_8c_a063a6fa55eab93378fb03d644e85f4f1}
+
+
+Inform luna/webOS that music is playing. Inform luna/webOS that music is playing Sends \{'appName': 'com.palm.pdl', 'isPlaying': s\} where s is true or false to luna://com.palm.mediaevents/notifyPlayingStatusChange
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em enable}]true=1, false=0\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero for success ?? 
+\end{DoxyReturn}
 \hypertarget{libpdl_8c_aac51c68a32f0c0e2154ab5cd2b5361c7}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-Quit@{PDL\_\-Quit}}
 \index{PDL\_\-Quit@{PDL\_\-Quit}!libpdl.c@{libpdl.c}}
 \subsubsection[{PDL\_\-Quit}]{\setlength{\rightskip}{0pt plus 5cm}int PDL\_\-Quit ()}}
 \label{libpdl_8c_aac51c68a32f0c0e2154ab5cd2b5361c7}
-\hypertarget{libpdl_8c_af572878137da8c583ed3de330fbe9ba7}{
+
+
+Cleans things up, haven't fully traced everything it's doing yet. \hypertarget{libpdl_8c_af572878137da8c583ed3de330fbe9ba7}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-ScreenTimeoutEnable@{PDL\_\-ScreenTimeoutEnable}}
 \index{PDL\_\-ScreenTimeoutEnable@{PDL\_\-ScreenTimeoutEnable}!libpdl.c@{libpdl.c}}
 \subsubsection[{PDL\_\-ScreenTimeoutEnable}]{\setlength{\rightskip}{0pt plus 5cm}int PDL\_\-ScreenTimeoutEnable (int {\em enable})}}
 \label{libpdl_8c_af572878137da8c583ed3de330fbe9ba7}
+
+
+Enables/Disables Screen Timeouts. 
+\begin{DoxyParams}{Parameters}
+\item[{\em enable}]1 for enable, 0 for disable \end{DoxyParams}
 \hypertarget{libpdl_8c_a837db37df0e7ed5c30c77fa7003d873d}{
 \index{libpdl.c@{libpdl.c}!PDL\_\-SetFirewallPortStatus@{PDL\_\-SetFirewallPortStatus}}
 \index{PDL\_\-SetFirewallPortStatus@{PDL\_\-SetFirewallPortStatus}!libpdl.c@{libpdl.c}}

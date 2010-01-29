@@ -60,15 +60,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#ad8defdaf8c921d744db8f97ae7a8ca2e">PDL_GetLanguage</a> (char *buffer, int sizeofbuffer)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fills buffer with language string (example: en_US).  <a href="#ad8defdaf8c921d744db8f97ae7a8ca2e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#a063a6fa55eab93378fb03d644e85f4f1">PDL_NotifyMusicPlaying</a> (int enable)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inform luna/webOS that music is playing.  <a href="#a063a6fa55eab93378fb03d644e85f4f1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#aac51c68a32f0c0e2154ab5cd2b5361c7">PDL_Quit</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cleans things up, haven't fully traced everything it's doing yet.  <a href="#aac51c68a32f0c0e2154ab5cd2b5361c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#af1b625ec84d61d05e1de09daa23cd2cc">PDL_LSCall</a> (char *arg1, char *arg2)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#af572878137da8c583ed3de330fbe9ba7">PDL_ScreenTimeoutEnable</a> (int enable)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables/Disables Screen Timeouts.  <a href="#af572878137da8c583ed3de330fbe9ba7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#a48961aeb42ad434658748780a23638bf">PDL_BannerMessagesEnable</a> (int enable)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables/Disables Notifications.  <a href="#a48961aeb42ad434658748780a23638bf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#aaaf46b50089d21bb91526978d910d41e">PDL_CustomPauseUiEnable</a> (int enable)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables/Disables Custom Pause UI.  <a href="#aaaf46b50089d21bb91526978d910d41e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#af1b183ec94d53d803fcd87f8e23f7f5b">PDL_FocusMessageEnable</a> (int bool)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables/Disables ????????  <a href="#af1b183ec94d53d803fcd87f8e23f7f5b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#a2cd3815e8eb259093c46df216581c69d">PDL_GesturesEnable</a> (int bool)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables/Disables Gestures.  <a href="#a2cd3815e8eb259093c46df216581c69d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#ab4990d40c8e84347ae844b2940b1fa39">PDL_GetKeyName</a> (int key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get key name.  <a href="#ab4990d40c8e84347ae844b2940b1fa39"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#af24a33b85d68e69cecfb18e2718579bf">PDLNet_Get_Info</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#abec9c74bee39180e65b647691a6ca792">PDL_FocusMessageEnable</a> (int bool)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="libpdl_8c.html#acd9d8cea35bb1a6aa4fba82366a9d0c7">PDL_GesturesEnable</a> (int bool)</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a48961aeb42ad434658748780a23638bf"></a><!-- doxytag: member="libpdl.c::PDL_BannerMessagesEnable" ref="a48961aeb42ad434658748780a23638bf" args="(int enable)" -->
@@ -86,6 +94,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+
+<p>Enables/Disables Notifications. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>enable</em>&nbsp;</td><td>1 for enable, 0 for disable </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -105,17 +121,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="memdoc">
 
+<p>Enables/Disables Custom Pause UI. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>enable</em>&nbsp;</td><td>1 for enable, 0 for disable </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="abec9c74bee39180e65b647691a6ca792"></a><!-- doxytag: member="libpdl.c::PDL_FocusMessageEnable" ref="abec9c74bee39180e65b647691a6ca792" args="(int bool)" -->
+<a class="anchor" id="af1b183ec94d53d803fcd87f8e23f7f5b"></a><!-- doxytag: member="libpdl.c::PDL_FocusMessageEnable" ref="af1b183ec94d53d803fcd87f8e23f7f5b" args="(int bool)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* PDL_FocusMessageEnable </td>
+          <td class="memname">void PDL_FocusMessageEnable </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>bool</em></td>
+          <td class="paramname"> <em>enable</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -123,23 +147,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="memdoc">
 
+<p>Enables/Disables ???????? </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>enable</em>&nbsp;</td><td>1 for enable, 0 for disable </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="acd9d8cea35bb1a6aa4fba82366a9d0c7"></a><!-- doxytag: member="libpdl.c::PDL_GesturesEnable" ref="acd9d8cea35bb1a6aa4fba82366a9d0c7" args="(int bool)" -->
+<a class="anchor" id="a2cd3815e8eb259093c46df216581c69d"></a><!-- doxytag: member="libpdl.c::PDL_GesturesEnable" ref="a2cd3815e8eb259093c46df216581c69d" args="(int bool)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* PDL_GesturesEnable </td>
+          <td class="memname">void PDL_GesturesEnable </td>
           <td>(</td>
           <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>bool</em></td>
+          <td class="paramname"> <em>enable</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Enables/Disables Gestures. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>enable</em>&nbsp;</td><td>1 for enable, 0 for disable </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -195,6 +235,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get key name. </p>
+<p>Get key name</p>
+<p>I think most of the keys are passed to SDL_GetKeyName, but the following are PDL specific? 229 = gesture forward, 231 = gesture area, 27 = gesture back</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>keycode?</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a string with the key name </dd></dl>
 
 </div>
 </div>
@@ -380,6 +431,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="memdoc">
 
+<p>Inform luna/webOS that music is playing. </p>
+<p>Inform luna/webOS that music is playing Sends {'appName': 'com.palm.pdl', 'isPlaying': s} where s is true or false to luna://com.palm.mediaevents/notifyPlayingStatusChange</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>enable</em>&nbsp;</td><td>true=1, false=0</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>zero for success ?? </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aac51c68a32f0c0e2154ab5cd2b5361c7"></a><!-- doxytag: member="libpdl.c::PDL_Quit" ref="aac51c68a32f0c0e2154ab5cd2b5361c7" args="()" -->
@@ -396,6 +457,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+
+<p>Cleans things up, haven't fully traced everything it's doing yet. </p>
 
 </div>
 </div>
@@ -414,6 +477,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+
+<p>Enables/Disables Screen Timeouts. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>enable</em>&nbsp;</td><td>1 for enable, 0 for disable </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -514,7 +585,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr size="1"/><address style="text-align: right;"><small>Generated on Fri Jan 29 15:12:41 2010 for WIDKPluginDevelopmentLibrary by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Fri Jan 29 15:29:04 2010 for WIDKPluginDevelopmentLibrary by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>
