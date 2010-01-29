@@ -1,0 +1,108 @@
+\begin{theindex}
+
+  \item {libpdl.c}, \hyperpage{3}
+    \subitem {PDL\_\discretionary {-}{}{}BannerMessagesEnable}, 
+		\hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}CustomPauseUiEnable}, 
+		\hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}FocusMessageEnable}, 
+		\hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}GesturesEnable}, \hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}GetDeviceName}, \hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}GetKeyName}, \hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}GetLanguage}, \hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}GetUniqueID}, \hyperpage{4}
+    \subitem {PDL\_\discretionary {-}{}{}LaunchBrowser}, \hyperpage{5}
+    \subitem {PDL\_\discretionary {-}{}{}LaunchEmail}, \hyperpage{5}
+    \subitem {PDL\_\discretionary {-}{}{}LSCall}, \hyperpage{5}
+    \subitem {PDL\_\discretionary {-}{}{}NotifyMusicPlaying}, 
+		\hyperpage{5}
+    \subitem {PDL\_\discretionary {-}{}{}Quit}, \hyperpage{5}
+    \subitem {PDL\_\discretionary {-}{}{}ScreenTimeoutEnable}, 
+		\hyperpage{5}
+    \subitem {PDL\_\discretionary {-}{}{}SetFirewallPortStatus}, 
+		\hyperpage{5}
+    \subitem {PDL\_\discretionary {-}{}{}SetOrientation}, \hyperpage{5}
+    \subitem {PDLNet\_\discretionary {-}{}{}Get\_\discretionary {-}{}{}Info}, 
+		\hyperpage{6}
+  \item {libpdl.h}, \hyperpage{7}
+    \subitem {PDL\_\discretionary {-}{}{}BannerMessagesEnable}, 
+		\hyperpage{7}
+    \subitem {PDL\_\discretionary {-}{}{}CustomPauseUiEnable}, 
+		\hyperpage{7}
+    \subitem {PDL\_\discretionary {-}{}{}FocusMessageEnable}, 
+		\hyperpage{7}
+    \subitem {PDL\_\discretionary {-}{}{}GesturesEnable}, \hyperpage{7}
+    \subitem {PDL\_\discretionary {-}{}{}GetDeviceName}, \hyperpage{7}
+    \subitem {PDL\_\discretionary {-}{}{}GetKeyName}, \hyperpage{8}
+    \subitem {PDL\_\discretionary {-}{}{}GetLanguage}, \hyperpage{8}
+    \subitem {PDL\_\discretionary {-}{}{}GetUniqueID}, \hyperpage{8}
+    \subitem {PDL\_\discretionary {-}{}{}LaunchBrowser}, \hyperpage{8}
+    \subitem {PDL\_\discretionary {-}{}{}LaunchEmail}, \hyperpage{8}
+    \subitem {PDL\_\discretionary {-}{}{}LSCall}, \hyperpage{9}
+    \subitem {PDL\_\discretionary {-}{}{}NotifyMusicPlaying}, 
+		\hyperpage{9}
+    \subitem {PDL\_\discretionary {-}{}{}Quit}, \hyperpage{9}
+    \subitem {PDL\_\discretionary {-}{}{}ScreenTimeoutEnable}, 
+		\hyperpage{9}
+    \subitem {PDL\_\discretionary {-}{}{}SetFirewallPortStatus}, 
+		\hyperpage{9}
+    \subitem {PDL\_\discretionary {-}{}{}SetOrientation}, \hyperpage{9}
+    \subitem {PDLNet\_\discretionary {-}{}{}Get\_\discretionary {-}{}{}Info}, 
+		\hyperpage{9}
+
+  \indexspace
+
+  \item {PDL\_\discretionary {-}{}{}BannerMessagesEnable}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{7}
+  \item {PDL\_\discretionary {-}{}{}CustomPauseUiEnable}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{7}
+  \item {PDL\_\discretionary {-}{}{}FocusMessageEnable}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{7}
+  \item {PDL\_\discretionary {-}{}{}GesturesEnable}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{7}
+  \item {PDL\_\discretionary {-}{}{}GetDeviceName}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{7}
+  \item {PDL\_\discretionary {-}{}{}GetKeyName}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{8}
+  \item {PDL\_\discretionary {-}{}{}GetLanguage}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{8}
+  \item {PDL\_\discretionary {-}{}{}GetUniqueID}
+    \subitem {libpdl.c}, \hyperpage{4}
+    \subitem {libpdl.h}, \hyperpage{8}
+  \item {PDL\_\discretionary {-}{}{}LaunchBrowser}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{8}
+  \item {PDL\_\discretionary {-}{}{}LaunchEmail}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{8}
+  \item {PDL\_\discretionary {-}{}{}LSCall}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{9}
+  \item {PDL\_\discretionary {-}{}{}NotifyMusicPlaying}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{9}
+  \item {PDL\_\discretionary {-}{}{}Quit}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{9}
+  \item {PDL\_\discretionary {-}{}{}ScreenTimeoutEnable}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{9}
+  \item {PDL\_\discretionary {-}{}{}SetFirewallPortStatus}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{9}
+  \item {PDL\_\discretionary {-}{}{}SetOrientation}
+    \subitem {libpdl.c}, \hyperpage{5}
+    \subitem {libpdl.h}, \hyperpage{9}
+  \item {PDLNet\_\discretionary {-}{}{}Get\_\discretionary {-}{}{}Info}
+    \subitem {libpdl.c}, \hyperpage{6}
+    \subitem {libpdl.h}, \hyperpage{9}
+
+\end{theindex}

@@ -1,0 +1,41 @@
+\contentsline {chapter}{\numberline {1}File Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}File List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}File Documentation}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}libpdl.c File Reference}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Function Documentation}{4}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}PDL\_\discretionary {-}{}{}BannerMessagesEnable}{4}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}PDL\_\discretionary {-}{}{}CustomPauseUiEnable}{4}{subsubsection.2.1.1.2}
+\contentsline {subsubsection}{\numberline {2.1.1.3}PDL\_\discretionary {-}{}{}FocusMessageEnable}{4}{subsubsection.2.1.1.3}
+\contentsline {subsubsection}{\numberline {2.1.1.4}PDL\_\discretionary {-}{}{}GesturesEnable}{4}{subsubsection.2.1.1.4}
+\contentsline {subsubsection}{\numberline {2.1.1.5}PDL\_\discretionary {-}{}{}GetDeviceName}{4}{subsubsection.2.1.1.5}
+\contentsline {subsubsection}{\numberline {2.1.1.6}PDL\_\discretionary {-}{}{}GetKeyName}{4}{subsubsection.2.1.1.6}
+\contentsline {subsubsection}{\numberline {2.1.1.7}PDL\_\discretionary {-}{}{}GetLanguage}{4}{subsubsection.2.1.1.7}
+\contentsline {subsubsection}{\numberline {2.1.1.8}PDL\_\discretionary {-}{}{}GetUniqueID}{4}{subsubsection.2.1.1.8}
+\contentsline {subsubsection}{\numberline {2.1.1.9}PDL\_\discretionary {-}{}{}LaunchBrowser}{5}{subsubsection.2.1.1.9}
+\contentsline {subsubsection}{\numberline {2.1.1.10}PDL\_\discretionary {-}{}{}LaunchEmail}{5}{subsubsection.2.1.1.10}
+\contentsline {subsubsection}{\numberline {2.1.1.11}PDL\_\discretionary {-}{}{}LSCall}{5}{subsubsection.2.1.1.11}
+\contentsline {subsubsection}{\numberline {2.1.1.12}PDL\_\discretionary {-}{}{}NotifyMusicPlaying}{5}{subsubsection.2.1.1.12}
+\contentsline {subsubsection}{\numberline {2.1.1.13}PDL\_\discretionary {-}{}{}Quit}{5}{subsubsection.2.1.1.13}
+\contentsline {subsubsection}{\numberline {2.1.1.14}PDL\_\discretionary {-}{}{}ScreenTimeoutEnable}{5}{subsubsection.2.1.1.14}
+\contentsline {subsubsection}{\numberline {2.1.1.15}PDL\_\discretionary {-}{}{}SetFirewallPortStatus}{5}{subsubsection.2.1.1.15}
+\contentsline {subsubsection}{\numberline {2.1.1.16}PDL\_\discretionary {-}{}{}SetOrientation}{6}{subsubsection.2.1.1.16}
+\contentsline {subsubsection}{\numberline {2.1.1.17}PDLNet\_\discretionary {-}{}{}Get\_\discretionary {-}{}{}Info}{6}{subsubsection.2.1.1.17}
+\contentsline {section}{\numberline {2.2}libpdl.h File Reference}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Function Documentation}{7}{subsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1.1}PDL\_\discretionary {-}{}{}BannerMessagesEnable}{7}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.2}PDL\_\discretionary {-}{}{}CustomPauseUiEnable}{7}{subsubsection.2.2.1.2}
+\contentsline {subsubsection}{\numberline {2.2.1.3}PDL\_\discretionary {-}{}{}FocusMessageEnable}{7}{subsubsection.2.2.1.3}
+\contentsline {subsubsection}{\numberline {2.2.1.4}PDL\_\discretionary {-}{}{}GesturesEnable}{7}{subsubsection.2.2.1.4}
+\contentsline {subsubsection}{\numberline {2.2.1.5}PDL\_\discretionary {-}{}{}GetDeviceName}{7}{subsubsection.2.2.1.5}
+\contentsline {subsubsection}{\numberline {2.2.1.6}PDL\_\discretionary {-}{}{}GetKeyName}{8}{subsubsection.2.2.1.6}
+\contentsline {subsubsection}{\numberline {2.2.1.7}PDL\_\discretionary {-}{}{}GetLanguage}{8}{subsubsection.2.2.1.7}
+\contentsline {subsubsection}{\numberline {2.2.1.8}PDL\_\discretionary {-}{}{}GetUniqueID}{8}{subsubsection.2.2.1.8}
+\contentsline {subsubsection}{\numberline {2.2.1.9}PDL\_\discretionary {-}{}{}LaunchBrowser}{8}{subsubsection.2.2.1.9}
+\contentsline {subsubsection}{\numberline {2.2.1.10}PDL\_\discretionary {-}{}{}LaunchEmail}{9}{subsubsection.2.2.1.10}
+\contentsline {subsubsection}{\numberline {2.2.1.11}PDL\_\discretionary {-}{}{}LSCall}{9}{subsubsection.2.2.1.11}
+\contentsline {subsubsection}{\numberline {2.2.1.12}PDL\_\discretionary {-}{}{}NotifyMusicPlaying}{9}{subsubsection.2.2.1.12}
+\contentsline {subsubsection}{\numberline {2.2.1.13}PDL\_\discretionary {-}{}{}Quit}{9}{subsubsection.2.2.1.13}
+\contentsline {subsubsection}{\numberline {2.2.1.14}PDL\_\discretionary {-}{}{}ScreenTimeoutEnable}{9}{subsubsection.2.2.1.14}
+\contentsline {subsubsection}{\numberline {2.2.1.15}PDL\_\discretionary {-}{}{}SetFirewallPortStatus}{9}{subsubsection.2.2.1.15}
+\contentsline {subsubsection}{\numberline {2.2.1.16}PDL\_\discretionary {-}{}{}SetOrientation}{9}{subsubsection.2.2.1.16}
+\contentsline {subsubsection}{\numberline {2.2.1.17}PDLNet\_\discretionary {-}{}{}Get\_\discretionary {-}{}{}Info}{9}{subsubsection.2.2.1.17}
