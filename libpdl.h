@@ -21,27 +21,78 @@
 #ifndef LIBPDL_H_
 #define LIBPDL_H_
 
-// Orientation: 0=bottom, 1= right, 2=top, 3=left
-// Note: this controls the notification popup location, it does not flip location 0,0
+/*!
+ * \brief This controls the notification popup location, it does not flip location 0,0
+ *
+ * This controls the notification popup location, it does not flip location 0,0
+ *
+ * \param Orientation an int (0=bottom, 1= right, 2=top, 3=left)
+ *
+ * \return zero for success ??
+ */
 int PDL_SetOrientation(int Orientation);
 
-// portnum is number of port, enabled is 0 or 1
+/*!
+ * \brief portnum is number of port, enabled is 0 or 1
+ *
+ * \param portnum Port number
+ * \param enabled 1 if firewall enabled
+ *
+ * \return zero for success ??
+ */
 int PDL_SetFirewallPortStatus(int portnum, int enabled);
 
-// note: something needs to be larger than 63, not sure what it controls right now
-// sizeofbuffer >= 63
+/*!
+ * \brief Get the unique id of the device
+ *
+ * Get the unique id of the device
+ * something needs to be larger than 63, not sure what it controls right now
+ * sizeofbuffer >= 63
+ *
+ * \param buffer A point to a buffer to store the ID in
+ * \param sizeofbuffer The size of the buffer
+ *
+ * \return zero for success ??
+ */
 int PDL_GetUniqueID(char * buffer, int sizeofbuffer);
 
-//sets buffer to device name, returns 0 on success...
+/*!
+ * \brief Get device name
+ *
+ * \param A point to a buffer to store the device name in
+ * \param sizeofbuffer The size of the buffer
+ *
+ * \return zero for success ??
+ */
 int PDL_GetDeviceName(char * buffer, int sizeofbuffer);
 
-//Opens web browser and points it to url
+/*!
+ * \brief Opens web browser with a particular url
+ *
+ * \param url The url which will be opened in the new browser card
+ *
+ * \return zero for success ??
+ */
 int PDL_LaunchBrowser(char * url);
 
-//Opens an email pre-populated with subject and text
+/*!
+ * \brief Opens an email pre-populated with subject and text
+ *
+ * \param subject The subject of the e-mail
+ * \param text The body of the e-mail
+ *
+ * \return zero for success ??
+ */
 int PDL_LaunchEmail(char * subject, char * text);
 
-//fills buffer with language string (example: en_US)
+/*!
+ * \brief Fills buffer with language string (example: en_US)
+ *
+ * \param A point to a buffer to store the language string in
+ * \param sizeofbuffer The size of the buffer
+ *
+ * \return zero for success ??
+ */
 int PDL_GetLanguage(char * buffer, int sizeofbuffer);
 
 //Sends {'appName': 'com.palm.pdl', 'isPlaying': %s} where %s is true or false to luna://com.palm.mediaevents/notifyPlayingStatusChange
