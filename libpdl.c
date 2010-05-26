@@ -18,7 +18,7 @@
  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  =============================================================================*/
 
-#include <libpdl.h>
+#include <PDL.h>
 
 PDL_Err PDL_ServiceCall(const char *uri, const char *payload){return 0;}
 PDL_Err PDL_ServiceCallWithCallback(const char *uri, const char *payload, PDL_ServiceCallbackFunc callback, void *user, PDL_bool removeAfterResponse){return 0;}
