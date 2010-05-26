@@ -20,21 +20,45 @@
 
 #include <libpdl.h>
 
-int PDL_SetOrientation(int Orientation){return 0;}
-int PDL_SetFirewallPortStatus(int portnum, int enabled){return 0;}
-int PDL_GetUniqueID(char * buffer, int sizeofbuffer){return 0;}
-int PDL_GetDeviceName(char * buffer, int sizeofbuffer){return 0;}
-int PDL_LaunchBrowser(char * url){return 0;}
-int PDL_LaunchEmail(char * subject, char * text){return 0;}
-int PDL_GetLanguage(char * buffer, int sizeofbuffer){return 0;}
-int PDL_NotifyMusicPlaying(int enable){return 0;}
-int PDL_Quit(){return 0;}
-int PDL_LSCall(char * arg1, char * arg2){return 0;}
-int PDL_ScreenTimeoutEnable(int enable){return 0;}
-void PDL_BannerMessagesEnable(int enable){}
-void PDL_CustomPauseUiEnable(int enable){}
-void PDL_FocusMessageEnable(int bool){}
-void PDL_GesturesEnable(int bool){}
-char * PDL_GetKeyName(int key){return 0;}
-
-void *PDLNet_Get_Info();
+PDL_Err PDL_ServiceCall(const char *uri, const char *payload){return 0;}
+PDL_Err PDL_ServiceCallWithCallback(const char *uri, const char *payload, PDL_ServiceCallbackFunc callback, void *user, PDL_bool removeAfterResponse){return 0;}
+PDL_Err PDL_UnregisterServiceCallback(PDL_ServiceCallbackFunc callback){return 0;}
+PDL_Err PDL_RegisterFunction(const char *functionName, const char *schema, PDL_ProviderCallbackFunc function){return 0;}
+PDL_Err PDL_ServiceRegistrationComplete(const char *suiteName){return 0;}
+PDL_bool        PDL_ParamExists(PDL_ServiceParameters *parms, const char *name){return 0;}
+void            PDL_GetParamString(PDL_ServiceParameters *parms, const char *name, char *buffer, int bufferLen){return;}
+int         PDL_GetParamInt(PDL_ServiceParameters *parms, const char *name){return 0;}
+double      PDL_GetParamDouble(PDL_ServiceParameters *parms, const char *name){return 0;}
+PDL_Err PDL_ProviderReply(PDL_ServiceParameters *parms, const char *reply){return 0;}
+PDL_Err PDL_RegisterMojoHandler(const char *functionName, PDL_MojoHandlerFunc function){return 0;}
+PDL_Err PDL_MojoRegistrationComplete(){return 0;}
+int PDL_GetNumMojoParams(PDL_MojoParameters *parms){return 0;}
+const char *PDL_GetMojoParamString(PDL_MojoParameters *parms, int paramNum){return 0;}
+int PDL_GetMojoParamInt(PDL_MojoParameters *parms, int paramNum){return 0;}
+double PDL_GetMojoParamDouble(PDL_MojoParameters *parms, int paramNum){return 0;}
+PDL_Err PDL_MojoReply(PDL_MojoParameters *parms, const char *reply){return 0;}
+PDL_Err PDL_MojoException(PDL_MojoParameters *parms, const char *reply){return 0;}
+PDL_Err PDLNet_Get_Info(const char * _interface, NETinfo * interfaceInfo){return 0;}
+PDL_Err PDL_CheckLicense(void){return 0;}
+PDL_Err PDL_ScreenTimeoutEnable(PDL_bool Enable){return 0;}
+PDL_Err PDL_Init(unsigned int flags){return 0;}
+PDL_Err PDL_LaunchEmail(const char* Subject, const char* Body){return 0;}
+PDL_Err PDL_LaunchBrowser(const char* Url){return 0;}
+char*   PDL_GetKeyName(PDL_key Key){return 0;}
+PDL_Err PDL_GetLanguage(char *buffer, int bufferLen){return 0;}
+PDL_Err PDL_GetNetInfo(const char *interfaceName, PDL_NetInfo * interfaceInfo){return 0;}
+PDL_Err PDL_SetOrientation(PDL_Orientation orientation){return 0;}
+PDL_Err PDL_BannerMessagesEnable(PDL_bool Enable){return 0;}
+PDL_Err PDL_GesturesEnable(PDL_bool Enable){return 0;}
+PDL_Err PDL_CustomPauseUiEnable(PDL_bool Enable){return 0;}
+PDL_Err PDL_NotifyMusicPlaying(PDL_bool MusicPlaying){return 0;}
+PDL_Err PDL_SetFirewallPortStatus(int port, PDL_bool Open){return 0;}
+PDL_Err PDL_GetUniqueID(char *buffer, int bufferLen){return 0;}
+PDL_Err PDL_GetDeviceName(char *buffer, int bufferLen){return 0;}
+PDL_Err PDL_GetCallingPath(char *buffer, int bufferLen){return 0;}
+PDL_Err PDL_GetDataFilePath(const char *dataFileName, char *buffer, int bufferLen){return 0;}
+PDL_Err PDL_GetAppinfoValue(const char *name, char *buffer, int bufferLen){return 0;};
+PDL_Err PDL_EnableLocationTracking(PDL_bool activate){return 0;}
+PDL_Err PDL_GetLocation(PDL_Location *location){return 0;}
+PDL_bool PDL_IsPlugin(void){return 0;}
+void    PDL_Quit(){return;}

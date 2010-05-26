@@ -21,164 +21,125 @@
 #ifndef LIBPDL_H_
 #define LIBPDL_H_
 
-/*!
- * \brief This controls the notification popup location, it does not flip location 0,0
- *
- * This controls the notification popup location, it does not flip location 0,0
- *
- * \param Orientation an int (0=bottom, 1= right, 2=top, 3=left)
- *
- * \return zero for success ??
- */
-int PDL_SetOrientation(int Orientation);
+#include <SDL_keysym.h>
+#include <SDL_stdinc.h>
 
-/*!
- * \brief portnum is number of port, enabled is 0 or 1
- *
- * \param portnum Port number
- * \param enabled 1 if firewall enabled
- *
- * \return zero for success ??
- */
-int PDL_SetFirewallPortStatus(int portnum, int enabled);
+typedef SDLKey      PDL_key;
+#define PDLKey      PDL_key
 
-/*!
- * \brief Get the unique id of the device
- *
- * Get the unique id of the device
- * something needs to be larger than 63, not sure what it controls right now
- * sizeofbuffer >= 63
- *
- * \param buffer A point to a buffer to store the ID in
- * \param sizeofbuffer The size of the buffer
- *
- * \return zero for success ??
- */
-int PDL_GetUniqueID(char * buffer, int sizeofbuffer);
+typedef SDL_bool    PDL_bool;
 
-/*!
- * \brief Get device name
- *
- * \param A point to a buffer to store the device name in
- * \param sizeofbuffer The size of the buffer
- *
- * \return zero for success ??
- */
-int PDL_GetDeviceName(char * buffer, int sizeofbuffer);
+#define PDL_FALSE   SDL_FALSE
+#define PDL_TRUE    SDL_TRUE
 
-/*!
- * \brief Opens web browser with a particular url
- *
- * \param url The url which will be opened in the new browser card
- *
- * \return zero for success ??
- */
-int PDL_LaunchBrowser(char * url);
+#define CALLBACK_PAYLOAD_MAX 1024
 
-/*!
- * \brief Opens an email pre-populated with subject and text
- *
- * \param subject The subject of the e-mail
- * \param text The body of the e-mail
- *
- * \return zero for success ??
- */
-int PDL_LaunchEmail(char * subject, char * text);
+#define PDL_GPS_UPDATE 0xE100  
 
-/*!
- * \brief Fills buffer with language string (example: en_US)
- *
- * \param A point to a buffer to store the language string in
- * \param sizeofbuffer The size of the buffer
- *
- * \return zero for success ??
- */
-int PDL_GetLanguage(char * buffer, int sizeofbuffer);
+#define PDL_GPS_FAILURE 0xE101  
 
-/*!
- * \brief Inform luna/webOS that music is playing
- *
- * Inform luna/webOS that music is playing
- * Sends {'appName': 'com.palm.pdl', 'isPlaying': %s} where %s is true or false to luna://com.palm.mediaevents/notifyPlayingStatusChange
- *
- * \param enable true=1, false=0
- *
- * \return zero for success ??
- */
-int PDL_NotifyMusicPlaying(int enable);
+typedef enum
+{
+    PDL_NOERROR = 0,
+    PDL_EMEMORY,
+    PDL_ECONNECTION,
+    PDL_INVALIDINPUT,
+    PDL_EOTHER,
+    PDL_UNINIT,
+    PDL_NOTALLOWED,
+    PDL_LICENSEFAILURE,
+    PDL_STRINGTOOSMALL,
+} PDL_Err;
 
-/*!
- * \brief Cleans things up, haven't fully traced everything it's doing yet
- */
-int PDL_Quit();
+typedef enum
+{
+        PDL_ORIENTATION_0 = 0,
+        PDL_ORIENTATION_90,
+        PDL_ORIENTATION_180,
+        PDL_ORIENTATION_270,
+} PDL_Orientation;
 
-/*
- * \brief make luna service calls
- *
- * make luna service calls
- * Cleans things up, haven't fully traced everything it's doing yet ~mdkline
- *
- * \param service_uri The service uri (example: luna://com.4chan.webapi/getImages)
- * \param payload JSON string of params to be passed to the service
- *
- * \return zen for success ??
- */
-int PDL_LSCall(char * serivce_uri, char * payload);
+enum
+{
+    PDLK_GESTURE_AREA       = 231,
+    PDLK_GESTURE_BACK       = 27,
+    PDLK_GESTURE_FORWARD    = 229,
+};
 
-//The Following are WebOS hooks in SDL, I'm not sure exactly what they control or where yet, it's just passed directly to SDL
+struct _PDL_NetInfo
+{
+        Uint32 ipaddress;
+        Uint32 netmask;
+        Uint32 broadcast;
+};
+typedef struct _PDL_NetInfo PDL_NetInfo;
 
-/*!
- * \brief Enables/Disables Screen Timeouts
- *
- * \param enable 1 for enable, 0 for disable
- */
-int PDL_ScreenTimeoutEnable(int enable);
+#define _NETinfo        _PDL_NetInfo
+#define NETinfo         PDL_NetInfo
 
-/*!
- * \brief Enables/Disables Notifications
- *
- * \param enable 1 for enable, 0 for disable
- */
-void PDL_BannerMessagesEnable(int enable);
+typedef struct
+{
+        double latitude;
+        double longitude;
+        double altitude;
+        double horizontalAccuracy;
+        double verticalAccuracy;
+        double heading;
+        double velocity;
+} PDL_Location;
 
-/*!
- * \brief Enables/Disables Custom Pause UI
- *
- * \param enable 1 for enable, 0 for disable
- */
-void PDL_CustomPauseUiEnable(int enable);
+typedef struct PDL_ServiceParameters PDL_ServiceParameters;
+typedef struct PDL_MojoParameters PDL_MojoParameters;
+typedef PDL_bool (*PDL_ServiceCallbackFunc) (PDL_ServiceParameters *params, void *user);
+typedef PDL_bool (*PDL_ProviderCallbackFunc) (PDL_ServiceParameters *params);
+typedef PDL_bool (*PDL_MojoHandlerFunc) (PDL_MojoParameters *params);
 
-/*!
- * \brief Enables/Disables Gestures
- *
- * \param enable 1 for enable, 0 for disable
- */
-void PDL_GesturesEnable(int enable);
+PDL_Err PDL_ServiceCall(const char *uri, const char *payload);
+PDL_Err PDL_ServiceCallWithCallback(const char *uri, const char *payload, PDL_ServiceCallbackFunc callback, void *user, PDL_bool removeAfterResponse);
+PDL_Err PDL_UnregisterServiceCallback(PDL_ServiceCallbackFunc callback);
+PDL_Err PDL_RegisterFunction(const char *functionName, const char *schema, PDL_ProviderCallbackFunc function);
+PDL_Err PDL_ServiceRegistrationComplete(const char *suiteName);
+PDL_bool        PDL_ParamExists(PDL_ServiceParameters *parms, const char *name);
+void            PDL_GetParamString(PDL_ServiceParameters *parms, const char *name, char *buffer, int bufferLen);
+int         PDL_GetParamInt(PDL_ServiceParameters *parms, const char *name);
+double      PDL_GetParamDouble(PDL_ServiceParameters *parms, const char *name);
+PDL_Err PDL_ProviderReply(PDL_ServiceParameters *parms, const char *reply);
 
-/*!
- * \brief Enables/Disables ????????
- *
- * \param enable 1 for enable, 0 for disable
- */
-void PDL_FocusMessageEnable(int enable);
+PDL_Err PDL_RegisterMojoHandler(const char *functionName, PDL_MojoHandlerFunc function);
 
-/*!
- * \brief Get key name
- *
- * Get key name
- *
- * I think most of the keys are passed to SDL_GetKeyName, but the following are PDL specific?
- * 229 = gesture forward, 231 = gesture area, 27 = gesture back
- *
- * \param key keycode?
- *
- * \return a string with the key name
- */
-char * PDL_GetKeyName(int key);
+PDL_Err PDL_MojoRegistrationComplete();
+int PDL_GetNumMojoParams(PDL_MojoParameters *parms);
+const char *PDL_GetMojoParamString(PDL_MojoParameters *parms, int paramNum);
+int PDL_GetMojoParamInt(PDL_MojoParameters *parms, int paramNum);
+double PDL_GetMojoParamDouble(PDL_MojoParameters *parms, int paramNum);
+PDL_Err PDL_MojoReply(PDL_MojoParameters *parms, const char *reply);
+PDL_Err PDL_MojoException(PDL_MojoParameters *parms, const char *reply);
 
-/*!
- * \breif ???????????
- */
-void *PDLNet_Get_Info();
+PDL_Err PDLNet_Get_Info(const char * _interface, NETinfo * interfaceInfo);
+PDL_Err PDL_CheckLicense(void);
+PDL_Err PDL_ScreenTimeoutEnable(PDL_bool Enable);
+
+PDL_Err PDL_Init(unsigned int flags);
+
+PDL_Err PDL_LaunchEmail(const char* Subject, const char* Body);
+PDL_Err PDL_LaunchBrowser(const char* Url);
+char*   PDL_GetKeyName(PDL_key Key);
+PDL_Err PDL_GetLanguage(char *buffer, int bufferLen);
+PDL_Err PDL_GetNetInfo(const char *interfaceName, PDL_NetInfo * interfaceInfo);
+PDL_Err PDL_SetOrientation(PDL_Orientation orientation);
+PDL_Err PDL_BannerMessagesEnable(PDL_bool Enable);
+PDL_Err PDL_GesturesEnable(PDL_bool Enable);
+PDL_Err PDL_CustomPauseUiEnable(PDL_bool Enable);
+PDL_Err PDL_NotifyMusicPlaying(PDL_bool MusicPlaying);
+PDL_Err PDL_SetFirewallPortStatus(int port, PDL_bool Open);
+PDL_Err PDL_GetUniqueID(char *buffer, int bufferLen);
+PDL_Err PDL_GetDeviceName(char *buffer, int bufferLen);
+PDL_Err PDL_GetCallingPath(char *buffer, int bufferLen);
+PDL_Err PDL_GetDataFilePath(const char *dataFileName, char *buffer, int bufferLen);
+PDL_Err PDL_GetAppinfoValue(const char *name, char *buffer, int bufferLen);
+PDL_Err PDL_EnableLocationTracking(PDL_bool activate);
+PDL_Err PDL_GetLocation(PDL_Location *location);
+PDL_bool PDL_IsPlugin(void);
+void    PDL_Quit();
 
 #endif /* LIBPDL_H_ */

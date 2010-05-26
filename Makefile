@@ -3,7 +3,7 @@ CC				=	$(CROSS_COMPILE)gcc
 MAIN_INCLUDES	=	-I.
 					
 ifeq ($(CS_TOOLCHAIN_ROOT),)				
-	INCLUDES	=	$(MAIN_INCLUDES)
+	INCLUDES	=	$(MAIN_INCLUDES) -I/usr/arm-none-linux-gnueabi/usr/include/SDL/
 else
 	INCLUDES	=	-L$(CS_TOOLCHAIN_ROOT)/arm-none-linux-gnueabi/libc/usr/lib \
 					-Xlinker -rpath-link=$(CROSS_COMPILE_ROOT)/usr/lib \
