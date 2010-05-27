@@ -142,4 +142,6 @@ PDL_Err PDL_GetLocation(PDL_Location *location);
 PDL_bool PDL_IsPlugin(void);
 void    PDL_Quit();
 
+PDL_Err PDL_CallJS(const char *functionName, const char **params, int numParams);
+
 #endif /* LIBPDL_H_ */

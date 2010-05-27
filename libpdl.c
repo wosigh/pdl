@@ -62,3 +62,4 @@ PDL_Err PDL_EnableLocationTracking(PDL_bool activate){return 0;}
 PDL_Err PDL_GetLocation(PDL_Location *location){return 0;}
 PDL_bool PDL_IsPlugin(void){return 0;}
 void    PDL_Quit(){return;}
+PDL_Err PDL_CallJS(const char *functionName, const char **params, int numParams){return 0;}
