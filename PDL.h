@@ -105,9 +105,9 @@ int         PDL_GetParamInt(PDL_ServiceParameters *parms, const char *name);
 double      PDL_GetParamDouble(PDL_ServiceParameters *parms, const char *name);
 PDL_Err PDL_ProviderReply(PDL_ServiceParameters *parms, const char *reply);
 
-PDL_Err PDL_RegisterMojoHandler(const char *functionName, PDL_MojoHandlerFunc function);
+PDL_Err PDL_RegisterJSHandler(const char *functionName, PDL_MojoHandlerFunc function);
 
-PDL_Err PDL_MojoRegistrationComplete();
+PDL_Err PDL_JSRegistrationComplete();
 int PDL_GetNumMojoParams(PDL_MojoParameters *parms);
 const char *PDL_GetMojoParamString(PDL_MojoParameters *parms, int paramNum);
 int PDL_GetMojoParamInt(PDL_MojoParameters *parms, int paramNum);

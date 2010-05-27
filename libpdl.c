@@ -30,8 +30,8 @@ void            PDL_GetParamString(PDL_ServiceParameters *parms, const char *nam
 int         PDL_GetParamInt(PDL_ServiceParameters *parms, const char *name){return 0;}
 double      PDL_GetParamDouble(PDL_ServiceParameters *parms, const char *name){return 0;}
 PDL_Err PDL_ProviderReply(PDL_ServiceParameters *parms, const char *reply){return 0;}
-PDL_Err PDL_RegisterMojoHandler(const char *functionName, PDL_MojoHandlerFunc function){return 0;}
-PDL_Err PDL_MojoRegistrationComplete(){return 0;}
+PDL_Err PDL_RegisterJSHandler(const char *functionName, PDL_MojoHandlerFunc function){return 0;}
+PDL_Err PDL_JSRegistrationComplete(){return 0;}
 int PDL_GetNumMojoParams(PDL_MojoParameters *parms){return 0;}
 const char *PDL_GetMojoParamString(PDL_MojoParameters *parms, int paramNum){return 0;}
 int PDL_GetMojoParamInt(PDL_MojoParameters *parms, int paramNum){return 0;}
