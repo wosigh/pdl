@@ -33,9 +33,9 @@ PDL_Err PDL_ProviderReply(PDL_ServiceParameters *parms, const char *reply){retur
 PDL_Err PDL_RegisterJSHandler(const char *functionName, PDL_JSHandlerFunc function){return 0;}
 PDL_Err PDL_JSRegistrationComplete(){return 0;}
 int PDL_GetNumMojoParams(PDL_JSParameters *parms){return 0;}
-const char *PDL_GetMojoParamString(PDL_JSParameters *parms, int paramNum){return 0;}
-int PDL_GetMojoParamInt(PDL_JSParameters *parms, int paramNum){return 0;}
-double PDL_GetMojoParamDouble(PDL_JSParameters *parms, int paramNum){return 0;}
+const char *PDL_GetJSParamString(PDL_JSParameters *parms, int paramNum){return 0;}
+int PDL_GetJSParamInt(PDL_JSParameters *parms, int paramNum){return 0;}
+double PDL_GetJSParamDouble(PDL_JSParameters *parms, int paramNum){return 0;}
 PDL_Err PDL_JSReply(PDL_JSParameters *parms, const char *reply){return 0;}
 PDL_Err PDL_JSException(PDL_JSParameters *parms, const char *reply){return 0;}
 PDL_Err PDLNet_Get_Info(const char * _interface, NETinfo * interfaceInfo){return 0;}
