@@ -30,14 +30,14 @@ void            PDL_GetParamString(PDL_ServiceParameters *parms, const char *nam
 int         PDL_GetParamInt(PDL_ServiceParameters *parms, const char *name){return 0;}
 double      PDL_GetParamDouble(PDL_ServiceParameters *parms, const char *name){return 0;}
 PDL_Err PDL_ProviderReply(PDL_ServiceParameters *parms, const char *reply){return 0;}
-PDL_Err PDL_RegisterJSHandler(const char *functionName, PDL_MojoHandlerFunc function){return 0;}
+PDL_Err PDL_RegisterJSHandler(const char *functionName, PDK_JSHandlerFunc function){return 0;}
 PDL_Err PDL_JSRegistrationComplete(){return 0;}
-int PDL_GetNumMojoParams(PDL_MojoParameters *parms){return 0;}
-const char *PDL_GetMojoParamString(PDL_MojoParameters *parms, int paramNum){return 0;}
-int PDL_GetMojoParamInt(PDL_MojoParameters *parms, int paramNum){return 0;}
-double PDL_GetMojoParamDouble(PDL_MojoParameters *parms, int paramNum){return 0;}
-PDL_Err PDL_JSReply(PDL_MojoParameters *parms, const char *reply){return 0;}
-PDL_Err PDL_JSException(PDL_MojoParameters *parms, const char *reply){return 0;}
+int PDL_GetNumMojoParams(PDK_JSParameters *parms){return 0;}
+const char *PDL_GetMojoParamString(PDK_JSParameters *parms, int paramNum){return 0;}
+int PDL_GetMojoParamInt(PDK_JSParameters *parms, int paramNum){return 0;}
+double PDL_GetMojoParamDouble(PDK_JSParameters *parms, int paramNum){return 0;}
+PDL_Err PDL_JSReply(PDK_JSParameters *parms, const char *reply){return 0;}
+PDL_Err PDL_JSException(PDK_JSParameters *parms, const char *reply){return 0;}
 PDL_Err PDLNet_Get_Info(const char * _interface, NETinfo * interfaceInfo){return 0;}
 PDL_Err PDL_CheckLicense(void){return 0;}
 PDL_Err PDL_ScreenTimeoutEnable(PDL_bool Enable){return 0;}

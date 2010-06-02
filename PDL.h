@@ -89,10 +89,10 @@ typedef struct
 } PDL_Location;
 
 typedef struct PDL_ServiceParameters PDL_ServiceParameters;
-typedef struct PDL_MojoParameters PDL_MojoParameters;
+typedef struct PDL_JSParameters PDL_JSParameters;
 typedef PDL_bool (*PDL_ServiceCallbackFunc) (PDL_ServiceParameters *params, void *user);
 typedef PDL_bool (*PDL_ProviderCallbackFunc) (PDL_ServiceParameters *params);
-typedef PDL_bool (*PDL_MojoHandlerFunc) (PDL_MojoParameters *params);
+typedef PDL_bool (*PDL_JSHandlerFunc) (PDL_JSParameters *params);
 
 PDL_Err PDL_ServiceCall(const char *uri, const char *payload);
 PDL_Err PDL_ServiceCallWithCallback(const char *uri, const char *payload, PDL_ServiceCallbackFunc callback, void *user, PDL_bool removeAfterResponse);
@@ -105,15 +105,15 @@ int         PDL_GetParamInt(PDL_ServiceParameters *parms, const char *name);
 double      PDL_GetParamDouble(PDL_ServiceParameters *parms, const char *name);
 PDL_Err PDL_ProviderReply(PDL_ServiceParameters *parms, const char *reply);
 
-PDL_Err PDL_RegisterJSHandler(const char *functionName, PDL_MojoHandlerFunc function);
+PDL_Err PDL_RegisterJSHandler(const char *functionName, PDL_JSHandlerFunc function);
 
 PDL_Err PDL_JSRegistrationComplete();
-int PDL_GetNumMojoParams(PDL_MojoParameters *parms);
-const char *PDL_GetMojoParamString(PDL_MojoParameters *parms, int paramNum);
-int PDL_GetMojoParamInt(PDL_MojoParameters *parms, int paramNum);
-double PDL_GetMojoParamDouble(PDL_MojoParameters *parms, int paramNum);
-PDL_Err PDL_JSReply(PDL_MojoParameters *parms, const char *reply);
-PDL_Err PDL_JSException(PDL_MojoParameters *parms, const char *reply);
+int PDL_GetNumMojoParams(PDL_JSParameters *parms);
+const char *PDL_GetMojoParamString(PDL_JSParameters *parms, int paramNum);
+int PDL_GetMojoParamInt(PDL_JSParameters *parms, int paramNum);
+double PDL_GetMojoParamDouble(PDL_JSParameters *parms, int paramNum);
+PDL_Err PDL_JSReply(PDL_JSParameters *parms, const char *reply);
+PDL_Err PDL_JSException(PDL_JSParameters *parms, const char *reply);
 
 PDL_Err PDLNet_Get_Info(const char * _interface, NETinfo * interfaceInfo);
 PDL_Err PDL_CheckLicense(void);
